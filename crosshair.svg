@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="150px" height="150px" viewBox="0 0 334.312 334.312" id="crosshair-svg-image" xml:space="preserve">
+    <style type="text/css">
+    :root {
+        --length: 8px;
+        --dark-color: #1c8c0d;
+        --light-color: #2ad21b;
+        --fill-color: #1c8c0d;
+        --fill-opacity: 0.75;
+        --backward-animation-direction: reverse;
+        --backward-animation-fill-mode: backwards;
+        --forward-animation-direction: normal;
+        --forward-animation-fill-mode: forwards;
+        --animation-duration: 7.5s;
+        --pulse-animation-duration: 1.5s;
+    }
+    .crosshair-group-wrapper {
+        overflow: hidden;
+    }
+    .crosshair-dot {
+        fill: var(--dark-color);
+    }
+    .crosshair-area {
+        stroke: var(--dark-color);
+        fill: var(--dark-color);
+        fill: none !important;
+        fill-opacity: var(--fill-opacity);
+        stroke-width: var(--length);
+        stroke: var(--dark-color);
+        stroke-opacity: var(--fill-opacity);
+        stroke-dasharray: 20%;
+        stroke-linecap: round;
+    }
+    .crosshair-line {
+        stroke: var(--light-color);
+        fill: var(--light-color);
+        stroke-width: var(--length);
+        stroke: var(--light-color);
+        stroke-linecap: round;
+    }
+    .crosshair-item {
+        fill: var(--fill-color);
+        fill-opacity: var(--fill-opacity);
+    }
+    @keyframes rotating {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes grow-horizontal {
+        from {
+            transform: scaleX(60%);
+        }
+        to {
+            transform: scaleX(80%);
+        }
+    }
+    @keyframes grow-vertical {
+        from {
+            transform: scaleY(60%);
+        }
+        to {
+            transform: scaleY(80%);
+        }
+    }
+    #line-top, #line-bottom {
+        transform-origin: 50% 50%;
+        animation-name: grow-vertical;
+        animation-duration: var(--pulse-animation-duration);
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: both;
+    }
+    #line-left, #line-right {
+        transform-origin: 50% 50%;
+        animation-name: grow-horizontal;
+        animation-duration: var(--pulse-animation-duration);
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: both;
+    }
+    .crosshair-animated {
+        transform-origin: 50% 50%;
+        animation-name: rotating;
+        animation-duration: var(--animation-duration);
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+    }
+    #crosshair-lower-area {
+        transform-origin: 50% 50%;
+        transform: scale(85%);
+    }
+    .crosshair-animated-backward {
+        animation-direction: var(--backward-animation-direction);
+        animation-fill-mode: var(--backward-animation-fill-mode);
+    }
+    .crosshair-animated-forward {
+        animation-direction: var(--forward-animation-direction);
+        animation-fill-mode: var(--backward-animation-fill-mode);
+    }
+    .crosshair-line-shift {
+        transform-origin: 50% 50%;
+        transform: scale(50%) rotate(45deg);
+    }
+    </style>
+    <g class="crosshair-group-wrapper">
+        <g class="crosshair-icon">
+            <circle class="crosshair-item crosshair-dot" cx="167.156" cy="167.156" r="10.000"/>
+            <line class="crosshair-item crosshair-line" id="line-top"    x1="167.156" y1="127.156" x2="167.156" y2="47.156" />
+            <line class="crosshair-item crosshair-line" id="line-bottom" x1="167.156" y1="207.156" x2="167.156" y2="287.156" />
+            <line class="crosshair-item crosshair-line" id="line-right"  x1="127.156" y1="167.156" x2="47.156"  y2="167.156" />
+            <line class="crosshair-item crosshair-line" id="line-left"   x1="207.156" y1="167.156" x2="287.156" y2="167.156" />
+        </g>
+        <g class="crosshair-icon crosshair-line-shift">
+            <line class="crosshair-item crosshair-line" x1="167.156" y1="117.156" x2="167.156" y2="47.156" />
+            <line class="crosshair-item crosshair-line" x1="167.156" y1="217.156" x2="167.156" y2="287.156" />
+            <line class="crosshair-item crosshair-line" x1="117.156" y1="167.156" x2="47.156"  y2="167.156" />
+            <line class="crosshair-item crosshair-line" x1="217.156" y1="167.156" x2="287.156" y2="167.156" />
+        </g>
+        <g class="crosshair-icon crosshair-animated crosshair-animated-backward crosshair-line-wrapper">
+            <circle class="crosshair-item crosshair-area" cx="167.156" cy="167.156" r="150.00" id="crosshair-lower-area" />
+        </g>
+        <g class="crosshair-icon crosshair-animated crosshair-animated-forward crosshair-area-wrapper">
+            <circle class="crosshair-item crosshair-area" cx="167.156" cy="167.156" r="150.00" id="crosshair-higher-area" />
+        </g>
+    </g>
+</svg>
