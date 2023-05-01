@@ -1,6 +1,15 @@
 ### Hi there 👋
 
-![Crosshair](./crosshair.svg)
+<table>
+<tr>
+<td><img src="./deadskull.svg" alt="Dead Skull" /></td>
+<td><h3>
+Ghosts :ghost: from the past :books: are everywhere,<br/>
+hauting the only one left future :watch:<br/>
+-- in which time is frozen :cold_face: forever.
+</h3></td>
+</tr>
+</table>
 
 <!--
 **marcoonroad/marcoonroad** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
