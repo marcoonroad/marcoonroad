@@ -21,7 +21,7 @@ hauting the only one left future :watch:<br/>
   src="https://github-readme-stats.vercel.app/api?username=marcoonroad&theme=dark&show_icons=true&title_color=aa3333&icon_color=66bb66"
   alt="Profile Stats" /> <img
   style="display: inline-block;"
-  src="https://github-readme-stats.vercel.app/api/top-langs?username=marcoonroad&hide=html,emacs%20lisp,scss,stylus,blade,css,shell,batchfile,dockerfile,typescript&theme=dark&show_icons=true&title_color=aa3333&icon_color=66bb66"
+  src="https://github-readme-stats.vercel.app/api/top-langs?username=marcoonroad&hide=html,emacs%20lisp,scss,stylus,blade,css,shell,perl%206,objective-c,reason,batchfile,dockerfile,scala,forth,c,makefile,standard%20ml,python,solidity,vue,php,ruby,javascript&theme=dark&show_icons=true&title_color=aa3333&icon_color=66bb66"
   alt="Top Langs" />
 </span>
 
